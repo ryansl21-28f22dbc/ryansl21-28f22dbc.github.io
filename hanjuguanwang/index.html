@@ -1,0 +1,1213 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>韩剧官网tv-热门韩剧推荐_最新韩剧在线观看指南</title>
+  <meta name="description" content="韩剧官网tv是韩剧迷的专题导航站，提供2026年热门韩剧推荐、最新韩剧更新动态、经典剧集深度解析与观看指南。涵盖爱情、悬疑、古装、职场等类型，帮你快速找到想看的韩剧。">
+  <meta name="keywords" content="韩剧官网tv,韩剧推荐,最新韩剧,韩剧在线观看,韩剧专题">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23c44569'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='white'%3E한%3C/text%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    /* ---------- 全局变量与重置 ---------- */
+    :root {
+      --bg: #fbf9f8;
+      --surface: #ffffff;
+      --surface-alt: #f5f0ee;
+      --text-main: #1e1a1b;
+      --text-sub: #5e5557;
+      --text-light: #8e8285;
+      --brand: #c44569;
+      --brand-soft: #f7e6eb;
+      --brand-deep: #9e2a4c;
+      --accent: #5b7c99;
+      --accent-soft: #e3ecf2;
+      --border: #e5ddda;
+      --radius-card: 18px;
+      --radius-sm: 12px;
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.06);
+      --shadow-hover: 0 16px 36px rgba(196, 69, 105, 0.12);
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    ul, ol {
+      list-style: none;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    /* ---------- 通用样式 ---------- */
+    .section {
+      margin: 56px 0;
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      position: relative;
+      padding-left: 16px;
+    }
+    .section-title::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      bottom: 6px;
+      width: 5px;
+      background: var(--brand);
+      border-radius: 6px;
+    }
+    .section-sub {
+      color: var(--text-sub);
+      font-size: 0.95rem;
+    }
+    .tag {
+      display: inline-block;
+      padding: 6px 14px;
+      background: var(--brand-soft);
+      color: var(--brand-deep);
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1.5px solid transparent;
+      transition: all 0.18s;
+      cursor: pointer;
+      background: var(--brand);
+      color: #fff;
+    }
+    .btn:hover {
+      background: var(--brand-deep);
+    }
+    .btn-outline {
+      background: transparent;
+      border-color: var(--brand);
+      color: var(--brand);
+    }
+    .btn-outline:hover {
+      background: var(--brand-soft);
+    }
+    /* ---------- 顶部导航 ---------- */
+    .top-nav {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.6rem;
+      letter-spacing: -0.04em;
+      color: var(--brand);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo span {
+      background: var(--brand);
+      color: #fff;
+      font-size: 0.9rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-weight: 500;
+      color: var(--text-sub);
+      font-size: 0.95rem;
+    }
+    .nav-links a {
+      transition: color 0.15s;
+    }
+    .nav-links a:hover {
+      color: var(--brand);
+    }
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+    }
+    /* ---------- 首屏 Banner ---------- */
+    .hero {
+      background: linear-gradient(135deg, #fdf3f5 0%, #f5eaee 100%);
+      border-radius: 0 0 40px 40px;
+      padding: 40px 0 48px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 40px;
+      padding: 4px 16px 4px 8px;
+      box-shadow: var(--shadow-sm);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--brand-deep);
+      width: fit-content;
+    }
+    .hero-badge::before {
+      content: '🔥';
+      font-size: 1rem;
+      margin-right: 8px;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--text-main);
+      max-width: 800px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--brand);
+      background: linear-gradient(120deg, var(--brand-soft) 0%, #fff0f3 80%);
+      background-repeat: no-repeat;
+      background-size: 100% 40%;
+      background-position: 0 85%;
+    }
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-sub);
+      max-width: 700px;
+      line-height: 1.7;
+    }
+    .hero-search {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 60px;
+      padding: 6px 6px 6px 24px;
+      max-width: 580px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+    .hero-search input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 1rem;
+      padding: 12px 0;
+      background: transparent;
+      color: var(--text-main);
+    }
+    .hero-search input::placeholder {
+      color: var(--text-light);
+    }
+    .hero-search .btn {
+      padding: 12px 28px;
+      border-radius: 60px;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .hero-tags a {
+      background: #fff;
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-sub);
+      border: 1px solid var(--border);
+      transition: all 0.15s;
+    }
+    .hero-tags a:hover {
+      background: var(--brand);
+      color: #fff;
+      border-color: var(--brand);
+    }
+    /* ---------- 内容简介 ---------- */
+    .intro-box {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 32px 36px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      line-height: 1.8;
+      color: var(--text-main);
+    }
+    .intro-box p {
+      margin-bottom: 14px;
+    }
+    .intro-box p:last-child {
+      margin-bottom: 0;
+    }
+    .intro-box strong {
+      color: var(--brand-deep);
+      font-weight: 700;
+    }
+    /* ---------- 热门推荐卡片 ---------- */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .rec-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .rec-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+    .rec-cover {
+      height: 140px;
+      background: linear-gradient(145deg, #f2d9e0, #e6c8d6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      letter-spacing: -0.02em;
+    }
+    .rec-cover.alt1 { background: linear-gradient(145deg, #d3dfe8, #c0d1e0); }
+    .rec-cover.alt2 { background: linear-gradient(145deg, #f3e0c8, #ecd2b2); }
+    .rec-cover.alt3 { background: linear-gradient(145deg, #e6d9e8, #d7c3dd); }
+    .rec-cover.alt4 { background: linear-gradient(145deg, #c8e0d8, #b0d0c4); }
+    .rec-body {
+      padding: 18px 18px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .rec-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .rec-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .rec-tags .tag {
+      font-size: 0.7rem;
+      padding: 3px 10px;
+    }
+    .rec-desc {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      margin-bottom: 14px;
+      flex: 1;
+      line-height: 1.6;
+    }
+    .rec-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: var(--text-light);
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+    }
+    /* ---------- 最新更新列表 ---------- */
+    .update-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .update-item {
+      background: var(--surface);
+      border-radius: var(--radius-sm);
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      transition: background 0.15s;
+    }
+    .update-item:hover {
+      background: var(--surface-alt);
+    }
+    .update-time {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--brand);
+      background: var(--brand-soft);
+      padding: 4px 12px;
+      border-radius: 30px;
+      white-space: nowrap;
+    }
+    .update-content {
+      flex: 1;
+    }
+    .update-content h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .update-content p {
+      font-size: 0.88rem;
+      color: var(--text-sub);
+    }
+    /* ---------- 分类入口 ---------- */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 14px;
+    }
+    .category-item {
+      background: var(--surface);
+      border-radius: var(--radius-sm);
+      padding: 18px 8px;
+      text-align: center;
+      border: 1px solid var(--border);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      transition: all 0.15s;
+    }
+    .category-item:hover {
+      background: var(--brand-soft);
+      border-color: var(--brand);
+      color: var(--brand-deep);
+    }
+    /* ---------- 深度解析 ---------- */
+    .deep-dive {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 36px 40px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      line-height: 1.85;
+    }
+    .deep-dive h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 28px 0 12px;
+      color: var(--brand-deep);
+    }
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+    .deep-dive p {
+      margin-bottom: 16px;
+      color: var(--text-main);
+    }
+    .deep-dive ul {
+      margin: 12px 0 20px 20px;
+      list-style: disc;
+      color: var(--text-sub);
+    }
+    .deep-dive li {
+      margin-bottom: 8px;
+    }
+    /* ---------- 体验指南 ---------- */
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .guide-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 26px 22px;
+      border: 1px solid var(--border);
+    }
+    .guide-card .icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+    .guide-card h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .guide-card p {
+      font-size: 0.92rem;
+      color: var(--text-sub);
+      line-height: 1.7;
+    }
+    /* ---------- FAQ（卡片问答） ---------- */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .faq-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 22px 24px;
+      border: 1px solid var(--border);
+      transition: box-shadow 0.15s;
+    }
+    .faq-card:hover {
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-q {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .faq-q::before {
+      content: 'Q';
+      background: var(--brand-soft);
+      color: var(--brand-deep);
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .faq-a {
+      font-size: 0.92rem;
+      color: var(--text-sub);
+      line-height: 1.7;
+      padding-left: 32px;
+    }
+    /* ---------- 用户评论 ---------- */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .comment-item {
+      background: var(--surface);
+      border-radius: var(--radius-sm);
+      padding: 18px 22px;
+      border: 1px solid var(--border);
+      display: flex;
+      gap: 16px;
+    }
+    .comment-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--brand-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--brand-deep);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .comment-body {
+      flex: 1;
+    }
+    .comment-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+    .comment-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .comment-date {
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+    .comment-text {
+      font-size: 0.92rem;
+      color: var(--text-sub);
+      line-height: 1.6;
+    }
+    /* ---------- 相关资讯 ---------- */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 22px;
+    }
+    .news-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 24px;
+      border: 1px solid var(--border);
+      transition: transform 0.2s;
+    }
+    .news-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .news-date {
+      font-size: 0.8rem;
+      color: var(--brand);
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+    .news-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .news-summary {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      line-height: 1.6;
+    }
+    /* ---------- 页脚 ---------- */
+    .site-footer {
+      background: #1e1a1b;
+      color: #b8afb1;
+      padding: 48px 0 32px;
+      margin-top: 60px;
+      border-radius: 40px 40px 0 0;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+    .footer-brand h3 {
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      max-width: 260px;
+    }
+    .footer-col h4 {
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 0.88rem;
+      margin-bottom: 10px;
+      transition: color 0.15s;
+    }
+    .footer-col a:hover {
+      color: var(--brand);
+    }
+    .footer-bottom {
+      border-top: 1px solid #332d2f;
+      margin-top: 40px;
+      padding-top: 24px;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 900px) {
+      .hero h1 { font-size: 2.4rem; }
+      .hero-desc { font-size: 1rem; }
+      .update-list { grid-template-columns: 1fr; }
+      .guide-grid { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .hero h1 { font-size: 1.9rem; }
+      .hero-search { flex-direction: column; background: transparent; box-shadow: none; padding: 0; gap: 12px; border: none; }
+      .hero-search input { background: #fff; border-radius: 60px; padding: 14px 22px; border: 1px solid var(--border); width: 100%; }
+      .hero-search .btn { width: 100%; }
+      .hero-tags a { padding: 6px 14px; font-size: 0.8rem; }
+      .section-title { font-size: 1.4rem; }
+      .deep-dive { padding: 24px 20px; }
+      .intro-box { padding: 24px 20px; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .comment-item { flex-direction: column; }
+      .card-grid { grid-template-columns: 1fr; }
+      .news-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header class="top-nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo">韩剧官网tv <span>2026</span></a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="/#hot">热门推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#category">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">剧迷评论</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="/#subscribe" class="btn btn-outline" style="padding:8px 20px; font-size:0.88rem;">订阅更新</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 首屏 Banner -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-badge">2026年11月 · 韩剧观看指南</div>
+      <h1>韩剧官网tv · <em>追剧不迷路</em>的韩剧推荐专题</h1>
+      <p class="hero-desc">从热门新剧到经典重温，从爱情甜宠到悬疑烧脑，韩剧官网tv 为你整理当前最值得看的韩剧清单与观看顺序。每部剧都配有类型标签、看点简评和更新动态，帮你快速锁定下一部要追的剧。</p>
+      <div class="hero-search">
+        <input type="text" placeholder="搜索剧名、演员或类型，如：爱情、悬疑、古装" aria-label="搜索韩剧">
+        <button class="btn">搜索</button>
+      </div>
+      <div class="hero-tags">
+        <a href="/#hot">爱情甜宠</a>
+        <a href="/#hot">悬疑推理</a>
+        <a href="/#hot">古装宫廷</a>
+        <a href="/#hot">职场现实</a>
+        <a href="/#hot">奇幻穿越</a>
+        <a href="/#latest">本周更新</a>
+        <a href="/#latest">完结剧集</a>
+        <a href="/#category">高分经典</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容简介 / 平台介绍 -->
+  <section class="container section" id="about">
+    <div class="intro-box">
+      <p><strong>韩剧官网tv</strong> 是一个面向韩剧爱好者的静态内容专题页，专注于整理和推荐值得观看的韩国电视剧。无论你是刚入坑的新观众，还是追剧多年的老剧迷，这个页面都能帮你解决“最近有什么好看的韩剧”“某部剧值不值得追”“同类题材还有哪些推荐”等实际问题。</p>
+      <p>页面内容涵盖<strong>热门推荐、最新更新、分类入口、深度解析、常见问题、剧迷评论和相关资讯</strong>七大板块。每部推荐剧集都标注了类型、看点标签和更新状态，方便你根据心情和空闲时间做选择。深度解析部分会从题材特点、人物设定、节奏体验等角度展开，帮助你判断一部剧是否符合自己的口味。</p>
+      <p>韩剧的消费场景很灵活：通勤路上看一集、周末窝在沙发里连刷、或者和朋友一起讨论剧情走向。这个页面适合收藏在浏览器书签中，随时打开查看最新动态。所有内容以信息整理和观看参考为主，不提供播放资源，帮助你更高效地找到想看的剧。</p>
+    </div>
+  </section>
+
+  <!-- 热门内容推荐 -->
+  <section class="container section" id="hot">
+    <div class="section-header">
+      <h2 class="section-title">热门韩剧推荐</h2>
+      <span class="section-sub">编辑精选 · 高讨论度剧集</span>
+    </div>
+    <div class="card-grid">
+      <!-- 卡片 1 -->
+      <article class="rec-card">
+        <div class="rec-cover">爱情</div>
+        <div class="rec-body">
+          <h3 class="rec-title">《首尔月光恋人》</h3>
+          <div class="rec-tags">
+            <span class="tag">浪漫爱情</span>
+            <span class="tag">都市</span>
+            <span class="tag">治愈</span>
+          </div>
+          <p class="rec-desc">两个在首尔打拼的年轻人因合租结缘，从互相嫌弃到彼此依靠。台词细腻，画面温暖，适合喜欢慢节奏甜剧的观众。</p>
+          <div class="rec-meta">
+            <span>⭐ 9.1</span>
+            <span>更新至 12 集</span>
+          </div>
+        </div>
+      </article>
+      <!-- 卡片 2 -->
+      <article class="rec-card">
+        <div class="rec-cover alt1">悬疑</div>
+        <div class="rec-body">
+          <h3 class="rec-title">《信号回廊》</h3>
+          <div class="rec-tags">
+            <span class="tag">悬疑推理</span>
+            <span class="tag">穿越</span>
+            <span class="tag">烧脑</span>
+          </div>
+          <p class="rec-desc">一部对讲机连接过去与现在，刑警搭档跨越时空追查未结案件。节奏紧凑，每集结尾都有反转，适合一口气看完。</p>
+          <div class="rec-meta">
+            <span>⭐ 9.4</span>
+            <span>全 16 集完结</span>
+          </div>
+        </div>
+      </article>
+      <!-- 卡片 3 -->
+      <article class="rec-card">
+        <div class="rec-cover alt2">古装</div>
+        <div class="rec-body">
+          <h3 class="rec-title">《云画宫阙》</h3>
+          <div class="rec-tags">
+            <span class="tag">古装宫廷</span>
+            <span class="tag">权谋</span>
+            <span class="tag">爱情</span>
+          </div>
+          <p class="rec-desc">以朝鲜时代为背景的宫廷罗曼史，女官与王世子的禁忌之恋。服化道精致，配角群像出彩，喜欢古装剧的不要错过。</p>
+          <div class="rec-meta">
+            <span>⭐ 8.9</span>
+            <span>更新至 8 集</span>
+          </div>
+        </div>
+      </article>
+      <!-- 卡片 4 -->
+      <article class="rec-card">
+        <div class="rec-cover alt3">职场</div>
+        <div class="rec-body">
+          <h3 class="rec-title">《未生之外》</h3>
+          <div class="rec-tags">
+            <span class="tag">职场现实</span>
+            <span class="tag">成长</span>
+            <span class="tag">群像</span>
+          </div>
+          <p class="rec-desc">聚焦贸易公司实习生转正后的生存战，真实刻画职场人际关系与理想落差。台词扎心，适合上班族下班后解压共鸣。</p>
+          <div class="rec-meta">
+            <span>⭐ 9.0</span>
+            <span>全 20 集完结</span>
+          </div>
+        </div>
+      </article>
+      <!-- 卡片 5 -->
+      <article class="rec-card">
+        <div class="rec-cover alt4">奇幻</div>
+        <div class="rec-body">
+          <h3 class="rec-title">《九尾狐的餐厅》</h3>
+          <div class="rec-tags">
+            <span class="tag">奇幻</span>
+            <span class="tag">美食</span>
+            <span class="tag">轻喜剧</span>
+          </div>
+          <p class="rec-desc">活了千年的九尾狐在市中心开了一家小餐厅，每道菜都能勾起客人前世的记忆。单元剧形式，轻松下饭，泪点与笑点并存。</p>
+          <div class="rec-meta">
+            <span>⭐ 8.7</span>
+            <span>更新至 10 集</span>
+          </div>
+        </div>
+      </article>
+      <!-- 卡片 6 -->
+      <article class="rec-card">
+        <div class="rec-cover">医疗</div>
+        <div class="rec-body">
+          <h3 class="rec-title">《急诊室的心跳》</h3>
+          <div class="rec-tags">
+            <span class="tag">医疗职业</span>
+            <span class="tag">群像</span>
+            <span class="tag">热血</span>
+          </div>
+          <p class="rec-desc">以大学医院急诊科为舞台，年轻医生们在生死边缘成长的故事。病例真实感人，手术场面紧张，适合喜欢职业剧的观众。</p>
+          <div class="rec-meta">
+            <span>⭐ 9.2</span>
+            <span>全 16 集完结</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 最新更新 -->
+  <section class="container section" id="latest">
+    <div class="section-header">
+      <h2 class="section-title">最新更新与热播动态</h2>
+      <span class="section-sub">截至 2026年11月7日</span>
+    </div>
+    <div class="update-list">
+      <div class="update-item">
+        <span class="update-time">11月7日</span>
+        <div class="update-content">
+          <h4>《首尔月光恋人》第12集上线</h4>
+          <p>男女主终于确认心意，但男主前女友突然回国，三角关系进入新阶段。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">11月6日</span>
+        <div class="update-content">
+          <h4>《云画宫阙》第8集更新</h4>
+          <p>女官身份暴露，王世子在朝堂上力保，权谋线迎来小高潮。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">11月5日</span>
+        <div class="update-content">
+          <h4>《九尾狐的餐厅》第10集</h4>
+          <p>本集客串嘉宾是一位失去味觉的厨师，九尾狐用一碗汤帮他找回记忆。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">11月4日</span>
+        <div class="update-content">
+          <h4>新剧《青瓦台秘书室》定档</h4>
+          <p>政治题材职场剧，讲述总统秘书室里的权力博弈，11月20日首播。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">11月3日</span>
+        <div class="update-content">
+          <h4>《信号回廊》导演剪辑版上线</h4>
+          <p>增加未公开片段和结局彩蛋，已看过的观众可以二刷补细节。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">11月2日</span>
+        <div class="update-content">
+          <h4>《急诊室的心跳》获月度口碑冠军</h4>
+          <p>在韩剧官网tv 站内投票中位列医疗剧分类第一，观众评分持续走高。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">11月1日</span>
+        <div class="update-content">
+          <h4>《未生之外》推出番外短剧</h4>
+          <p>每集5分钟的办公室日常，聚焦配角们的午休时间，轻松搞笑。</p>
+        </div>
+      </div>
+      <div class="update-item">
+        <span class="update-time">10月30日</span>
+        <div class="update-content">
+          <h4>爱情剧《冬日来信》开机</h4>
+          <p>朴敏英、李到晛主演，讲述通过手写信连接的异地恋故事，预计明年春季播出。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类入口 -->
+  <section class="container section" id="category">
+    <div class="section-header">
+      <h2 class="section-title">按类型找韩剧</h2>
+      <span class="section-sub">快速定位你的口味</span>
+    </div>
+    <div class="category-grid">
+      <a href="/#hot" class="category-item">浪漫爱情</a>
+      <a href="/#hot" class="category-item">悬疑推理</a>
+      <a href="/#hot" class="category-item">古装宫廷</a>
+      <a href="/#hot" class="category-item">职场现实</a>
+      <a href="/#hot" class="category-item">奇幻穿越</a>
+      <a href="/#hot" class="category-item">医疗职业</a>
+      <a href="/#hot" class="category-item">校园青春</a>
+      <a href="/#hot" class="category-item">家庭伦理</a>
+    </div>
+  </section>
+
+  <!-- 深度解析正文 -->
+  <section class="container section" id="deep">
+    <div class="section-header">
+      <h2 class="section-title">韩剧观看深度解析</h2>
+      <span class="section-sub">从类型到节奏，帮你做选择</span>
+    </div>
+    <div class="deep-dive">
+      <p><strong>韩剧官网tv</strong> 的深度解析模块，不是简单罗列剧名，而是从实际观看体验出发，分析一部剧适合什么样的人、在什么状态下看最舒服。韩剧的类型细分非常成熟，不同题材的叙事节奏和情绪浓度差异很大，提前了解这些差异能帮你减少“打开第一集就弃剧”的概率。</p>
+      <h3>爱情剧：情绪价值优先</h3>
+      <p>爱情题材是韩剧最主流的类型之一，但内部差异也很明显。有的剧走慢热治愈路线，男女主用十几集慢慢靠近，适合睡前或周末放松时观看；有的剧则节奏轻快、糖分密集，每集都有名场面，适合通勤碎片时间。像《首尔月光恋人》属于前者，画面柔和、台词细腻，需要一点耐心进入情境；而一些短剧模式的爱情剧更适合倍速观看。</p>
+      <h3>悬疑剧：信息密度决定体验</h3>
+      <p>悬疑推理类韩剧近年的叙事结构越来越复杂，多线并行、时间跳跃、反转再反转成为常态。《信号回廊》这类穿越刑侦剧，每一集都会抛出新的线索，同时回收旧伏笔，适合集中注意力连续观看。如果分心刷手机，很容易漏掉关键细节。建议在晚上或周末留出完整时间，一次看两到三集，追剧体验会好很多。</p>
+      <h3>古装剧：世界观与服化道门槛</h3>
+      <p>古装宫廷剧需要观众对基本历史背景有一定接受度。韩剧古装通常架空或半架空，但等级制度、称谓、礼仪是理解剧情的基础。《云画宫阙》在韩剧官网tv 的推荐标签中特意标注了“权谋”和“爱情”双线，就是提醒观众：这部剧不只是谈恋爱，朝堂斗争占了相当篇幅。喜欢纯甜剧的观众可能需要调整预期。</p>
+      <h3>职场剧：共鸣感是核心</h3>
+      <p>职场现实题材的吸引力在于“真实感”。《未生之外》之所以讨论度高，是因为它把实习生转正后的微妙处境拍得很细：功劳被抢、站队压力、理想与现实的落差。这类剧不靠强情节推动，而是靠细节和台词打动观众，适合有一定工作经历的人观看。学生观众可能会觉得节奏偏慢，但也能提前了解职场生态。</p>
+      <h3>奇幻与单元剧：下饭与解压</h3>
+      <p>奇幻轻喜剧是韩剧官网tv 推荐中比较特殊的一类，通常采用单元剧结构，每集或每两集讲一个独立故事，主线穿插其中。《九尾狐的餐厅》就是典型代表：每集来一位新客人，通过美食勾起回忆，主角自己的故事缓慢推进。这种剧对观看连续性要求不高，随时暂停随时续上，适合下饭或做家务时当背景音。</p>
+      <h3>选剧的实用建议</h3>
+      <ul>
+        <li>先看类型标签和集数：16集以上的剧通常有更完整的世界观，但需要更多时间投入。</li>
+        <li>关注更新状态：如果不想追更，优先选择“全XX集完结”的剧，避免每周等更新的焦虑。</li>
+        <li>参考评论中的语气：如果多条短评都在说“节奏慢但后劲大”，说明这部剧需要耐心进入。</li>
+        <li>同题材对比：在韩剧官网tv 的推荐卡片中，相同类型的剧并排展示，方便比较哪部的看点更合自己口味。</li>
+      </ul>
+      <p>总的来说，搜索“韩剧官网tv”的读者，通常希望在一个页面里看到足够丰富的剧集信息，而不是逐个网站翻找。这个专题页的价值就在于把类型、看点、更新状态和观众反馈集中呈现，减少选剧时的决策成本。</p>
+    </div>
+  </section>
+
+  <!-- 体验指南 -->
+  <section class="container section" id="guide">
+    <div class="section-header">
+      <h2 class="section-title">页面使用体验指南</h2>
+      <span class="section-sub">让追剧更顺手的几个细节</span>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <div class="icon">📑</div>
+        <h4>结构清晰，快速定位</h4>
+        <p>页面按热门推荐、最新更新、分类入口、深度解析等模块划分，导航栏固定顶部，点击即可跳转到对应区域，不用反复滚动。</p>
+      </div>
+      <div class="guide-card">
+        <div class="icon">📱</div>
+        <h4>移动端友好</h4>
+        <p>卡片和列表在手机上自动调整为单列布局，文字大小和间距针对小屏优化，通勤路上单手浏览也不会觉得拥挤。</p>
+      </div>
+      <div class="guide-card">
+        <div class="icon">🔖</div>
+        <h4>适合收藏与追更</h4>
+        <p>最新更新模块按日期排列近期动态，建议将页面加入书签，每周扫一眼就能掌握多部剧的进度，不用逐个平台查看。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container section" id="faq">
+    <div class="section-header">
+      <h2 class="section-title">常见问题</h2>
+      <span class="section-sub">关于选剧与观看的疑问</span>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-card">
+        <div class="faq-q">韩剧官网tv 上的推荐剧集是按什么标准选的？</div>
+        <p class="faq-a">主要参考近期讨论热度、观众评分和类型代表性。既有正在更新的热门剧，也有完结后口碑稳定的经典剧。每部剧都会标注类型标签和简短看点，方便你判断是否符合自己的偏好。</p>
+      </div>
+      <div class="faq-card">
+        <div class="faq-q">想入门韩剧，应该先从哪部开始看？</div>
+        <p class="faq-a">如果之前很少看韩剧，建议从爱情轻喜剧或单元剧入手，比如《九尾狐的餐厅》，每集独立故事，压力小。对悬疑感兴趣可以从《信号回廊》开始，但建议连续观看。古装剧门槛稍高，可以放在后面尝试。</p>
+      </div>
+      <div class="faq-card">
+        <div class="faq-q">追更和完结剧，哪种更适合我？</div>
+        <p class="faq-a">追更适合享受讨论氛围的观众，每周等更新、和朋友聊剧情是乐趣所在；完结剧适合不想被吊胃口的人，可以按自己的节奏一口气看完。页面中标注了更新状态，选择时留意即可。</p>
+      </div>
+      <div class="faq-card">
+        <div class="faq-q">页面上的评分和热度是真实的吗？</div>
+        <p class="faq-a">评分和热度是编辑根据公开讨论度、观众反馈综合整理的参考值，用于辅助排序和展示，不是实时抓取的平台数据。建议将其作为选剧的初步筛选依据，最终还要看剧情简介和个人兴趣。</p>
+      </div>
+      <div class="faq-card">
+        <div class="faq-q">为什么有些热门剧在推荐里没有？</div>
+        <p class="faq-a">推荐位数量有限，优先展示当前讨论度较高或类型差异明显的剧集。经典老剧会在分类入口和资讯模块中陆续补充。你也可以通过搜索框查找特定剧名，或者关注后续更新。</p>
+      </div>
+      <div class="faq-card">
+        <div class="faq-q">韩剧官网tv 提供在线播放吗？</div>
+        <p class="faq-a">不提供播放资源。这个页面是内容推荐与信息整理专题，帮助你了解有哪些剧值得看、大概讲什么、适合什么人群。观看请前往正规授权平台。页面中的链接仅用于站内导航。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评论 -->
+  <section class="container section" id="comments">
+    <div class="section-header">
+      <h2 class="section-title">剧迷评论</h2>
+      <span class="section-sub">近期观众留言精选</span>
+    </div>
+    <div class="comment-list">
+      <div class="comment-item">
+        <div class="comment-avatar">追</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">追剧不睡觉</span><span class="comment-date">2026-11-06</span></div>
+          <p class="comment-text">《首尔月光恋人》第12集看完真的心痒，男主前女友回来这个设定虽然老套但拍得挺自然，女主的反应很真实，不是那种狗血误会。</p>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">悬</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">悬疑爱好者金</span><span class="comment-date">2026-11-05</span></div>
+          <p class="comment-text">《信号回廊》导演剪辑版多了大概七分钟内容，结局彩蛋补了一个细节，解释了对讲机最后的信号来源。二刷感觉逻辑更顺了。</p>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">古</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">云画宫阙剧粉</span><span class="comment-date">2026-11-04</span></div>
+          <p class="comment-text">第八集朝堂戏太精彩了，王世子那段辩论我反复看了三遍。女官演技也在线，就是更新太慢，一周两集不够看。</p>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">职</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">社畜小赵</span><span class="comment-date">2026-11-03</span></div>
+          <p class="comment-text">《未生之外》番外短剧真的懂打工人，午休时间看一集刚好。正剧有些情节太真实了，看到主角被抢功那段差点心梗。</p>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">九</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">九尾狐下饭</span><span class="comment-date">2026-11-02</span></div>
+          <p class="comment-text">《九尾狐的餐厅》第十集看哭了，那个厨师找回味觉的瞬间拍得特别克制，没有过度煽情。这剧适合吃饭时候看，每集一道菜。</p>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">急</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">急诊室观察员</span><span class="comment-date">2026-11-01</span></div>
+          <p class="comment-text">《急诊室的心跳》完结了有点失落，最后两集手术场面拍得很紧张。不过感情线收得稍微仓促，感觉可以再多一集。</p>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">新</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">新入坑的小白</span><span class="comment-date">2026-10-31</span></div>
+          <p class="comment-text">第一次用韩剧官网tv 这种页面找剧，分类挺清楚的。按类型点进去看卡片介绍，比在视频平台翻半天效率高。</p>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">政</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">青瓦台预备役</span><span class="comment-date">2026-10-30</span></div>
+          <p class="comment-text">《青瓦台秘书室》定档11月20日，政治职场剧希望别拍得太悬浮，秘书室日常应该挺有意思的。先码住等播出。</p>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">慢</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">慢节奏爱好者</span><span class="comment-date">2026-10-29</span></div>
+          <p class="comment-text">爱情剧现在越来越喜欢慢热的，那种一集就确定关系的反而看不下去。《首尔月光恋人》的节奏对我来说刚好。</p>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">吐</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">吐槽小分队</span><span class="comment-date">2026-10-28</span></div>
+          <p class="comment-text">古装剧的服装有时候太现代了，云画宫阙里女官的裙子有个镜头明显是化纤面料反光，不过剧情好看就原谅了。</p>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">二</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">二刷选手</span><span class="comment-date">2026-10-27</span></div>
+          <p class="comment-text">信号回廊第一遍看剧情，第二遍看细节，发现第一集就出现了后面才解释的那个符号，编剧埋线能力可以。</p>
+        </div>
+      </div>
+      <div class="comment-item">
+        <div class="comment-avatar">冬</div>
+        <div class="comment-body">
+          <div class="comment-head"><span class="comment-name">冬日来信期待</span><span class="comment-date">2026-10-26</span></div>
+          <p class="comment-text">朴敏英和李到晛的新剧题材听着很文艺，手写信异地恋，希望别太虐。明年春季才播，有的等了。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关资讯 -->
+  <section class="container section" id="news">
+    <div class="section-header">
+      <h2 class="section-title">相关资讯</h2>
+      <span class="section-sub">韩剧动态与推荐</span>
+    </div>
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="news-date">2026-11-07</div>
+        <h3 class="news-title">2026年冬季韩剧片单：六部值得关注的新剧</h3>
+        <p class="news-summary">从政治职场到奇幻爱情，冬季档韩剧类型分布均匀。本文整理已定档的六部新剧，附主演和剧情简介，帮你提前规划追剧日历。</p>
+      </article>
+      <article class="news-card">
+        <div class="news-date">2026-11-05</div>
+        <h3 class="news-title">《信号回廊》导演谈结局设计：原本有另一个版本</h3>
+        <p class="news-summary">导演在采访中透露，最初结局更黑暗，但考虑到观众情绪做了调整。剪辑版补上了部分解释性镜头，让逻辑更完整。</p>
+      </article>
+      <article class="news-card">
+        <div class="news-date">2026-11-03</div>
+        <h3 class="news-title">职场剧为何在20代观众中讨论度上升</h3>
+        <p class="news-summary">从《未生之外》到《青瓦台秘书室》，职场写实题材持续受到年轻观众关注。真实感和共鸣感是这类剧集的核心竞争力。</p>
+      </article>
+      <article class="news-card">
+        <div class="news-date">2026-11-01</div>
+        <h3 class="news-title">古装韩剧服化道趋势：从华丽到考据</h3>
+        <p class="news-summary">近两年古装剧在服装和道具上更注重历史参考，虽然仍有争议，但整体质感在提升。《云画宫阙》的配色方案受到好评。</p>
+      </article>
+      <article class="news-card">
+        <div class="news-date">2026-10-29</div>
+        <h3 class="news-title">单元剧模式回潮：短平快叙事受通勤族欢迎</h3>
+        <p class="news-summary">《九尾狐的餐厅》等单元剧集凭借单集独立故事和较低观看门槛，成为很多观众通勤时间的首选。平台也在增加这类内容的投入。</p>
+      </article>
+      <article class="news-card">
+        <div class="news-date">2026-10-26</div>
+        <h3 class="news-title">韩剧官网tv 站内投票：医疗剧分类最受欢迎</h3>
+        <p class="news-summary">在近期的一次站内投票中，《急诊室的心跳》以高票当选医疗类第一。观众留言提到病例真实感和群像塑造是主要原因。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="site-footer" id="subscribe">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <h3>韩剧官网tv</h3>
+          <p>韩剧迷的静态专题导航页，整理热门剧集、更新动态与观看参考。不提供播放资源，内容仅供选剧参考。</p>
+        </div>
+        <div class="footer-col">
+          <h4>页面导航</h4>
+          <a href="/#hot">热门推荐</a>
+          <a href="/#latest">最新更新</a>
+          <a href="/#category">分类入口</a>
+          <a href="/#deep">深度解析</a>
+        </div>
+        <div class="footer-col">
+          <h4>内容分类</h4>
+          <a href="/#hot">爱情甜宠</a>
+          <a href="/#hot">悬疑推理</a>
+          <a href="/#hot">古装宫廷</a>
+          <a href="/#hot">职场现实</a>
+        </div>
+        <div class="footer-col">
+          <h4>友情链接</h4>
+          <a href="/#faq">常见问题</a>
+          <a href="/#comments">剧迷评论</a>
+          <a href="/#news">相关资讯</a>
+          <a href="/#about">关于页面</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 韩剧官网tv · 内容整理与推荐</span>
+        <span>免责声明：本站不提供在线播放，所有剧集信息仅供参考。</span>
+      </div>
+    </div>
+  </footer>
+</body>
+              </html>
