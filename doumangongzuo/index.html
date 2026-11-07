@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>抖漫工作室-国漫新锐厂牌_原创动画制作动态与作品解析</title>
+  <meta name="description" content="抖漫工作室是近年来活跃的国漫新锐厂牌，专注原创动画与短番开发。本专题聚合抖漫工作室最新作品动态、制作团队解析、代表片段点评、追番日历与社区讨论，适合国漫爱好者与行业观察者收藏浏览。">
+  <meta name="keywords" content="抖漫工作室,国漫厂牌,原创动画,短番制作,国漫新锐">
+  <style>
+    :root {
+      --bg: #f8f6f2;
+      --surface: #ffffff;
+      --ink: #1f1e1c;
+      --ink-secondary: #4a4743;
+      --accent: #c4452c;
+      --accent-soft: #f0e2db;
+      --border: #e3dfd9;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,0.03);
+      --shadow-hover: 0 12px 28px rgba(0,0,0,0.06);
+      --radius-card: 18px;
+      --radius-btn: 40px;
+      --font: 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', system-ui, sans-serif;
+      --max-width: 1200px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 顶部导航 */
+    .nav-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.92);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-badge {
+      width: 38px;
+      height: 38px;
+      background: var(--accent);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 800;
+      box-shadow: 0 6px 12px rgba(196, 69, 44, 0.2);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ink-secondary);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 10px rgba(196, 69, 44, 0.25);
+      transition: 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: #a83622;
+      transform: translateY(-1px);
+    }
+
+    /* Banner */
+    .hero {
+      padding: 48px 0 32px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--ink-secondary);
+      max-width: 520px;
+      margin-bottom: 24px;
+    }
+
+    .search-box {
+      display: flex;
+      background: #fff;
+      border-radius: var(--radius-btn);
+      padding: 6px 6px 6px 22px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      max-width: 460px;
+      margin-bottom: 28px;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 0.95rem;
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .search-box button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-tags a {
+      background: var(--accent-soft);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 500;
+      transition: 0.15s;
+    }
+
+    .hero-tags a:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .hero-visual {
+      background: linear-gradient(145deg, #f3e9e3, #e8ddd6);
+      border-radius: 32px;
+      min-height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.5), var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-visual::after {
+      content: "抖漫";
+      font-size: 5rem;
+      font-weight: 900;
+      color: rgba(196, 69, 44, 0.1);
+      letter-spacing: 0.06em;
+    }
+
+    /* 通用section */
+    .section {
+      padding: 56px 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .section-more {
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .film-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .film-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-tag {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: #f1efec;
+      color: var(--ink-secondary);
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    .tag-accent {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .film-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .film-card p {
+      font-size: 0.88rem;
+      color: var(--ink-secondary);
+      flex: 1;
+      margin-bottom: 14px;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: #7f7a74;
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+      margin-top: 6px;
+    }
+
+    /* 最新更新列表 */
+    .update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .update-item {
+      background: var(--surface);
+      border-radius: 14px;
+      padding: 16px 22px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: 0.15s;
+    }
+
+    .update-item:hover {
+      border-color: var(--accent);
+    }
+
+    .update-name {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .update-desc {
+      color: var(--ink-secondary);
+      font-size: 0.9rem;
+      flex: 1;
+      margin: 0 16px;
+      min-width: 200px;
+    }
+
+    .update-time {
+      font-size: 0.78rem;
+      color: #9a948c;
+      white-space: nowrap;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .category-item {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 24px 18px;
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: 0.2s;
+      font-weight: 600;
+      color: var(--ink-secondary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .category-item:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    /* 深度解析 */
+    .analysis-content {
+      background: var(--surface);
+      border-radius: 28px;
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+    }
+
+    .analysis-content h2 {
+      font-size: 1.9rem;
+      margin-bottom: 24px;
+      font-weight: 700;
+    }
+
+    .analysis-content h3 {
+      font-size: 1.3rem;
+      margin: 28px 0 12px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .analysis-content p {
+      margin-bottom: 16px;
+      color: var(--ink-secondary);
+      font-size: 1rem;
+    }
+
+    .analysis-content strong {
+      color: var(--ink);
+    }
+
+    /* FAQ */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 22px 26px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-item h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .faq-item p {
+      font-size: 0.92rem;
+      color: var(--ink-secondary);
+    }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    .comment-card {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .comment-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+    }
+
+    .comment-name {
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .comment-date {
+      color: #a8a29a;
+    }
+
+    .comment-text {
+      font-size: 0.9rem;
+      color: var(--ink-secondary);
+    }
+
+    /* 资讯卡片 */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .news-card {
+      background: var(--surface);
+      border-radius: 20px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: 0.2s;
+    }
+
+    .news-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .news-date {
+      font-size: 0.75rem;
+      color: #a8a29a;
+      margin-bottom: 10px;
+    }
+
+    .news-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .news-card p {
+      font-size: 0.88rem;
+      color: var(--ink-secondary);
+    }
+
+    /* 页脚 */
+    .footer {
+      background: #1f1e1c;
+      color: #b9b3ab;
+      padding: 48px 0 24px;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 32px;
+    }
+
+    .footer h4 {
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .footer p, .footer a {
+      font-size: 0.85rem;
+      line-height: 1.8;
+      color: #b9b3ab;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #3a3733;
+      padding-top: 22px;
+      font-size: 0.78rem;
+      text-align: center;
+      color: #7d7872;
+    }
+
+    /* 响应式 */
+    @media (max-width: 960px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 16px;
+      }
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      .category-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .analysis-content {
+        padding: 24px;
+      }
+      .update-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .update-desc {
+        margin: 8px 0;
+      }
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<header class="nav-bar">
+  <div class="container nav-inner">
+    <div class="logo">
+      <span class="logo-badge">抖</span>
+      <span>抖漫工作室</span>
+    </div>
+    <nav class="nav-links">
+      <a href="/#hot-recommend">热门推荐</a>
+      <a href="/#latest-update">最新动态</a>
+      <a href="/#deep-analysis">深度解析</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comments">社区评论</a>
+    </nav>
+    <a href="/#subscribe" class="nav-cta">追番订阅</a>
+  </div>
+</header>
+
+<!-- 首屏Banner -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>抖漫工作室 <span>国漫新锐厂牌</span> 原创动画与短番开发</h1>
+      <p class="hero-sub">聚焦抖漫工作室最新作品动态、制作团队解析与社区口碑。从立项到上线，从正片到花絮，这里有你关心的全部内容。</p>
+      <div class="search-box">
+        <input type="text" placeholder="搜索抖漫工作室作品、制作人、上线时间...">
+        <button>搜索</button>
+      </div>
+      <div class="hero-tags">
+        <a href="/#hot-recommend">原创短番</a>
+        <a href="/#latest-update">更新日历</a>
+        <a href="/#deep-analysis">制作解析</a>
+        <a href="/#comments">社区讨论</a>
+        <a href="/#news">资讯速递</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#subscribe">订阅提醒</a>
+      </div>
+    </div>
+    <div class="hero-visual"></div>
+  </div>
+</section>
+
+<!-- 内容简介 -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">关于抖漫工作室</h2>
+    </div>
+    <div class="analysis-content">
+      <p><strong>抖漫工作室</strong>是近年来在国漫领域快速崛起的新锐动画制作厂牌，以原创短番、泡面番和轻量级系列动画为核心产品线。工作室擅长将网络热门梗、生活化场景与轻幻想设定结合，形成辨识度较高的“抖漫式”叙事节奏——单集时长控制在5-15分钟，信息密度高、爽点前置，适合移动端碎片化观看。</p>
+      <p>从早期短视频平台试水到如今多平台同步发行，抖漫工作室逐步建立起稳定的制作流程与粉丝社群。其作品题材覆盖校园搞笑、都市奇幻、轻科幻与治愈日常，在B站、抖音、腾讯视频等渠道均有稳定更新。对于国漫爱好者而言，关注抖漫工作室意味着能第一时间捕捉到新番试映、制作花絮和线下活动信息；对于行业观察者，抖漫工作室的产能节奏与选题策略也是观察国漫短番赛道的重要样本。</p>
+      <p>本专题页聚合了抖漫工作室的代表作品推荐、最新更新动态、制作团队深度解析、社区评论与常见问题，适合收藏作为长期追番与信息检索的入口。无论你是刚接触抖漫工作室的新观众，还是从早期作品一路跟过来的老粉，都能在这里找到有价值的参考内容。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 热门推荐 -->
+<section class="section" id="hot-recommend">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">热门作品推荐</h2>
+      <a href="/#latest-update" class="section-more">查看全部 →</a>
+    </div>
+    <div class="card-grid">
+      <div class="film-card">
+        <div class="card-tag"><span class="tag tag-accent">校园搞笑</span><span class="tag">短番</span><span class="tag">泡面番</span></div>
+        <h3>《课间十分钟》</h3>
+        <p>抖漫工作室校园题材代表作，每集还原一个课间名场面，从同桌互怼到走廊罚站，笑点密集且代入感极强。</p>
+        <div class="card-meta"><span>更新至第24集</span><span>热度 9.2万</span></div>
+      </div>
+      <div class="film-card">
+        <div class="card-tag"><span class="tag tag-accent">都市奇幻</span><span class="tag">轻喜剧</span><span class="tag">连载中</span></div>
+        <h3>《合租室友是狐仙》</h3>
+        <p>都市合租+妖怪设定，抖漫工作室在轻奇幻赛道的试水之作。日常与异能的配比拿捏得比较舒服，狐仙角色人气颇高。</p>
+        <div class="card-meta"><span>更新至第18集</span><span>评分 8.7</span></div>
+      </div>
+      <div class="film-card">
+        <div class="card-tag"><span class="tag tag-accent">轻科幻</span><span class="tag">悬疑</span><span class="tag">季番</span></div>
+        <h3>《记忆回收站》</h3>
+        <p>设定在近未来，主角经营一家记忆置换小店。抖漫工作室少有的严肃向尝试，单元剧结构，情感浓度比预期高。</p>
+        <div class="card-meta"><span>全12集已完结</span><span>评分 8.9</span></div>
+      </div>
+      <div class="film-card">
+        <div class="card-tag"><span class="tag tag-accent">治愈日常</span><span class="tag">萌系</span><span class="tag">短番</span></div>
+        <h3>《猫和我的便利店》</h3>
+        <p>夜班店员与流浪猫的治愈日常，抖漫工作室招牌的温柔色调和留白叙事，适合睡前放松观看。</p>
+        <div class="card-meta"><span>更新至第30集</span><span>热度 7.8万</span></div>
+      </div>
+      <div class="film-card">
+        <div class="card-tag"><span class="tag tag-accent">热血</span><span class="tag">运动</span><span class="tag">短番</span></div>
+        <h3>《街角球场》</h3>
+        <p>三人篮球题材，抖漫工作室在动作作画上的突破之作。每集一场比赛，节奏快、分镜有想法，运动番爱好者值得一看。</p>
+        <div class="card-meta"><span>更新至第15集</span><span>评分 8.5</span></div>
+      </div>
+      <div class="film-card">
+        <div class="card-tag"><span class="tag tag-accent">搞笑</span><span class="tag">历史梗</span><span class="tag">泡面番</span></div>
+        <h3>《如果古人玩手机》</h3>
+        <p>抖漫工作室脑洞系列，将历史人物置入现代社交场景。每集3分钟，梗密度高，适合碎片时间刷。</p>
+        <div class="card-meta"><span>更新至第42集</span><span>热度 6.3万</span></div>
+      </div>
+      <div class="film-card">
+        <div class="card-tag"><span class="tag tag-accent">悬疑</span><span class="tag">单元剧</span><span class="tag">季番</span></div>
+        <h3>《午夜电台》</h3>
+        <p>抖漫工作室在悬疑赛道的实验性作品，每集一个都市怪谈，结尾常有反转。氛围营造比预期成熟，适合深夜观看。</p>
+        <div class="card-meta"><span>全8集已完结</span><span>评分 8.2</span></div>
+      </div>
+      <div class="film-card">
+        <div class="card-tag"><span class="tag tag-accent">美食</span><span class="tag">治愈</span><span class="tag">短番</span></div>
+        <h3>《深夜食堂的猫》</h3>
+        <p>美食+治愈的经典组合，抖漫工作室用极简线条和暖色系构建了一个让人安心的深夜世界，适合配饭观看。</p>
+        <div class="card-meta"><span>更新至第22集</span><span>热度 5.9万</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 最新更新 -->
+<section class="section" id="latest-update">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">最新更新与动态</h2>
+      <span class="section-more">2026年11月7日 更新</span>
+    </div>
+    <div class="update-list">
+      <div class="update-item">
+        <span class="update-name">《课间十分钟》</span>
+        <span class="update-desc">第24集「运动会名场面」上线，抖漫工作室官方发布分镜手稿</span>
+        <span class="update-time">11月7日</span>
+      </div>
+      <div class="update-item">
+        <span class="update-name">《合租室友是狐仙》</span>
+        <span class="update-desc">第18集更新，狐仙身份线迎来关键转折</span>
+        <span class="update-time">11月6日</span>
+      </div>
+      <div class="update-item">
+        <span class="update-name">《街角球场》</span>
+        <span class="update-desc">第15集上线，抖漫工作室首次尝试长镜头运动作画</span>
+        <span class="update-time">11月5日</span>
+      </div>
+      <div class="update-item">
+        <span class="update-name">《猫和我的便利店》</span>
+        <span class="update-desc">第30集特别篇「初雪」更新，片尾附制作组访谈</span>
+        <span class="update-time">11月4日</span>
+      </div>
+      <div class="update-item">
+        <span class="update-name">《如果古人玩手机》</span>
+        <span class="update-desc">第42集「苏轼的Vlog」上线，单集播放量破工作室纪录</span>
+        <span class="update-time">11月3日</span>
+      </div>
+      <div class="update-item">
+        <span class="update-name">《记忆回收站》</span>
+        <span class="update-desc">完结纪念访谈发布，导演谈抖漫工作室首部季番的取舍</span>
+        <span class="update-time">11月2日</span>
+      </div>
+      <div class="update-item">
+        <span class="update-name">《午夜电台》</span>
+        <span class="update-desc">抖漫工作室宣布将推出第二季，预计2027年春季上线</span>
+        <span class="update-time">11月1日</span>
+      </div>
+      <div class="update-item">
+        <span class="update-name">《深夜食堂的猫》</span>
+        <span class="update-desc">第22集更新，新角色「拉面店老板」登场</span>
+        <span class="update-time">10月31日</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 分类入口 -->
+<section class="section" id="categories">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">按分类浏览抖漫工作室作品</h2>
+    </div>
+    <div class="category-grid">
+      <a href="/#hot-recommend" class="category-item">校园搞笑</a>
+      <a href="/#hot-recommend" class="category-item">都市奇幻</a>
+      <a href="/#hot-recommend" class="category-item">轻科幻</a>
+      <a href="/#hot-recommend" class="category-item">治愈日常</a>
+      <a href="/#hot-recommend" class="category-item">热血运动</a>
+      <a href="/#hot-recommend" class="category-item">悬疑单元剧</a>
+      <a href="/#hot-recommend" class="category-item">历史脑洞</a>
+      <a href="/#hot-recommend" class="category-item">美食治愈</a>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="section" id="deep-analysis">
+  <div class="container">
+    <div class="analysis-content">
+      <h2>深度解析：抖漫工作室的内容策略与制作特点</h2>
+      <p>抖漫工作室在国漫短番赛道的位置比较特殊——它既不是传统动画公司的长片路线，也不是纯粹的短视频段子号，而是介于两者之间，用“短番+系列化”的方式慢慢积累作品库和观众认知。从已上线的几部作品来看，抖漫工作室的选题逻辑主要围绕三个方向展开：<strong>高共鸣的日常场景</strong>（校园、合租、便利店）、<strong>低门槛的幻想设定</strong>（狐仙、记忆置换、时空错位）以及<strong>强情绪的单集闭环</strong>（每集一个完整小故事，结尾轻巧收束）。</p>
+      <h3>题材选择：贴近生活，轻量幻想</h3>
+      <p>抖漫工作室的多数作品都建立在观众熟悉的日常场景之上。《课间十分钟》几乎复刻了每个人的校园记忆，《合租室友是狐仙》则把都市年轻人的合租焦虑与妖怪设定嫁接在一起。这种做法降低了观众的进入门槛，同时用幻想元素制造新鲜感。值得注意的是，抖漫工作室在处理幻想设定时相对克制，不会为了世界观而牺牲单集节奏，这与其短番定位是匹配的。</p>
+      <h3>制作风格：效率优先，偶有亮点</h3>
+      <p>从制作层面看，抖漫工作室的产能节奏在同类厂牌中属于中上水平，月更2-3部短番的频率保证了社群活跃度。作画方面，日常场景的表演比较自然，动作戏和复杂运镜则相对简省——这是多数短番工作室的共性选择。不过《街角球场》第15集的长镜头和《记忆回收站》的几场情绪戏说明，抖漫工作室在关键集数上愿意投入额外资源，制作上限比预期高。</p>
+      <h3>叙事节奏：爽点前置，单集闭环</h3>
+      <p>抖漫工作室的作品普遍遵循“前30秒抛设定、中段堆冲突、结尾留钩子”的节奏模板。这种结构在移动端观看场景下效率很高，但也意味着不适合追求深度叙事的观众。如果你喜欢的是《时光代理人》那种长线悬疑或《中国奇谭》式的作者表达，抖漫工作室的作品可能偏轻；但如果你需要的是下饭、通勤、睡前的轻松内容，抖漫工作室的短番几乎每部都能满足。</p>
+      <h3>适合人群与搜索意图</h3>
+      <p>搜索“抖漫工作室”的用户通常有几类：想找新番下饭的普通观众、关注国漫厂牌动态的爱好者、寻找合作或投递简历的从业者，以及想了解某部作品是否值得追的潜在观众。本专题页覆盖了以上需求——作品推荐帮新观众快速筛选，更新动态帮追番党掌握节奏，深度解析和FAQ则服务行业观察与制作研究。</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">常见问题</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>抖漫工作室主要做哪类动画？</h4>
+        <p>抖漫工作室以原创短番和泡面番为主，单集时长多在5-15分钟，题材覆盖校园搞笑、都市奇幻、治愈日常和轻科幻悬疑。作品结构偏向单集闭环，适合移动端碎片化观看，也有《记忆回收站》这类12集季番尝试。</p>
+      </div>
+      <div class="faq-item">
+        <h4>抖漫工作室的作品在哪里看？</h4>
+        <p>目前抖漫工作室的作品在B站、抖音、腾讯视频等平台均有上线，部分短番会先在短视频平台更新，再聚合到长视频平台。建议关注抖漫工作室官方账号获取最新的播出渠道信息，不同平台的更新节奏可能略有差异。</p>
+      </div>
+      <div class="faq-item">
+        <h4>第一次看抖漫工作室，从哪部开始比较好？</h4>
+        <p>如果喜欢轻松搞笑，可以从《课间十分钟》或《如果古人玩手机》入手，单集3-8分钟无门槛；偏好剧情向的观众推荐《记忆回收站》，全12集完结，一口气看完体验更完整；治愈系受众直接看《猫和我的便利店》即可。</p>
+      </div>
+      <div class="faq-item">
+        <h4>抖漫工作室的更新频率稳定吗？</h4>
+        <p>从2026年的更新记录来看，抖漫工作室维持着每月2-3部作品更新的节奏，主力连载的周更相对稳定，新作试水期偶尔会有调整。建议收藏本专题页或关注官方账号，我们会在更新日历模块同步最新动态。</p>
+      </div>
+      <div class="faq-item">
+        <h4>抖漫工作室有推出周边或线下活动吗？</h4>
+        <p>目前抖漫工作室的周边以线上商城限定为主，包括角色立牌、徽章和设定集。线下活动方面，工作室曾参与国漫展会并在现场举办过试映会，后续场次信息会通过官方渠道发布，本页资讯模块也会跟进报道。</p>
+      </div>
+      <div class="faq-item">
+        <h4>抖漫工作室和传统动画公司有什么不同？</h4>
+        <p>抖漫工作室的定位更接近“厂牌”而非传统制作公司，作品体量轻、迭代快，选题紧跟网络热点，发行上高度依赖短视频与长视频平台的组合。这种模式让它的试错成本更低，同时也意味着单部作品的制作精度和叙事深度通常不及头部季番。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 用户评论 -->
+<section class="section" id="comments">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">社区评论</h2>
+      <span class="section-more">近30天精选</span>
+    </div>
+    <div class="comment-grid">
+      <div class="comment-card"><div class="comment-header"><span class="comment-name">追番小能手</span><span class="comment-date">11月6日</span></div><p class="comment-text">《课间十分钟》第24集那个运动会接力掉棒的场景，我直接笑出声，抖漫工作室是懂校园生活的。</p></div>
+      <div class="comment-card"><div class="comment-header"><span class="comment-name">狐仙饲养员</span><span class="comment-date">11月5日</span></div><p class="comment-text">《合租室友是狐仙》更新到18集了，狐仙身份线终于要展开了，等了好久。不过最近几集日常占比有点高，希望主线推快一点。</p></div>
+      <div class="comment-card"><div class="comment-header"><span class="comment-name">深夜泡面党</span><span class="comment-date">11月4日</span></div><p class="comment-text">抖漫工作室的治愈系是真的下饭。《深夜食堂的猫》每集就几分钟，但氛围做得特别舒服，适合睡前看。</p></div>
+      <div class="comment-card"><div class="comment-header"><span class="comment-name">街球少年阿伟</span><span class="comment-date">11月3日</span></div><p class="comment-text">《街角球场》第15集那个长镜头有点东西啊，抖漫工作室居然能做出这种运动作画，希望第二季能保持。</p></div>
+      <div class="comment-card"><div class="comment-header"><span class="comment-name">记忆收藏家</span><span class="comment-date">11月2日</span></div><p class="comment-text">《记忆回收站》完结了，后三集的情感浓度比前面高很多，抖漫工作室做严肃题材其实挺有潜力的，希望别只做搞笑番。</p></div>
+      <div class="comment-card"><div class="comment-header"><span class="comment-name">路过吐槽君</span><span class="comment-date">11月1日</span></div><p class="comment-text">《如果古人玩手机》前几集挺有意思，后面感觉梗重复了，希望抖漫工作室能多找点新角度，苏轼那集倒是回勇了。</p></div>
+      <div class="comment-card"><div class="comment-header"><span class="comment-name">猫猫教教主</span><span class="comment-date">10月31日</span></div><p class="comment-text">《猫和我的便利店》特别篇看哭了，抖漫工作室在细节上真的很用心，猫的每个小动作都画得很真实。</p></div>
+      <div class="comment-card"><div class="comment-header"><span class="comment-name">国漫观察员</span><span class="comment-date">10月30日</span></div><p class="comment-text">抖漫工作室的产能确实可以，但作品质量参差。短番赛道竞争越来越激烈，希望他们能在美术风格上再统一一些。</p></div>
+      <div class="comment-card"><div class="comment-header"><span class="comment-name">午休十分钟</span><span class="comment-date">10月29日</span></div><p class="comment-text">追抖漫工作室的短番最大的好处就是不用攒，午休时间刚好刷一集，节奏也不拖沓，社畜友好。</p></div>
+      <div class="comment-card"><div class="comment-header"><span class="comment-name">午夜电台听众</span><span class="comment-date">10月28日</span></div><p class="comment-text">《午夜电台》第二季快点来！第一季8集根本不够看，这种都市怪谈单元剧太对胃口了，抖漫工作室搞悬疑有一手。</p></div>
+      <div class="comment-card"><div class="comment-header"><span class="comment-name">设定集收集癖</span><span class="comment-date">10月27日</span></div><p class="comment-text">抖漫工作室周边能不能多出点？《记忆回收站》的设定集一直缺货，希望官方补货快一点。</p></div>
+      <div class="comment-card"><div class="comment-header"><span class="comment-name">动画专业在读</span><span class="comment-date">10月26日</span></div><p class="comment-text">从制作角度看，抖漫工作室的分镜效率很高，单集信息量塞得很满，但有些场景的表演略显套路。整体来说作为学习参考还是不错的。</p></div>
+      <div class="comment-card"><div class="comment-header"><span class="comment-name">佛系追番</span><span class="comment-date">10月25日</span></div><p class="comment-text">本来只是刷到《课间十分钟》随便看看，结果把抖漫工作室的作品全补了一遍，这种轻量短番真的上头。</p></div>
+      <div class="comment-card"><div class="comment-header"><span class="comment-name">不吃香菜</span><span class="comment-date">10月24日</span></div><p class="comment-text">《合租室友是狐仙》的男主配音有点出戏，其他都挺好。抖漫工作室选角可以再打磨一下。</p></div>
+      <div class="comment-card"><div class="comment-header"><span class="comment-name">历史宅小李</span><span class="comment-date">10月23日</span></div><p class="comment-text">《如果古人玩手机》建议多出几集，这种历史梗加现代生活的反差感太有意思了，抖漫工作室的编剧脑洞可以再开大点。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 相关资讯 -->
+<section class="section" id="news">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">相关资讯</h2>
+    </div>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="news-date">2026年11月7日</div>
+        <h3>抖漫工作室发布2027年片单预告，三部新作立项</h3>
+        <p>据官方消息，抖漫工作室明年将推出校园奇幻、都市悬疑和运动题材各一部短番，其中一部为《街角球场》精神续作。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026年11月5日</div>
+        <h3>《午夜电台》第二季确认制作，预计2027年春季上线</h3>
+        <p>抖漫工作室在完结访谈中透露第二季将延续单元剧结构，同时引入一条贯穿全季的暗线，剧本已进入分集大纲阶段。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026年11月3日</div>
+        <h3>抖漫工作室参展国漫博览会，现场试映新作片段</h3>
+        <p>工作室在展会现场播放了未公开新作的先行片段，并举办制作团队问答环节，吸引大量粉丝排队参与。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026年10月30日</div>
+        <h3>《记忆回收站》完结纪念设定集开启预售</h3>
+        <p>设定集收录全12集分镜稿、角色设定和导演手记，抖漫工作室官方商城同步上线限量附赠版。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026年10月28日</div>
+        <h3>抖漫工作室与多家平台达成短番合作发行协议</h3>
+        <p>未来抖漫工作室的作品将在更多渠道同步更新，缩短平台之间的更新时间差，方便观众跨平台追番。</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">2026年10月25日</div>
+        <h3>《课间十分钟》单集播放量创工作室新高</h3>
+        <p>最新一集上线48小时内播放量突破工作室历史纪录，抖漫工作室官方发布感谢海报并预告后续特别篇。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 订阅引导 -->
+<section class="section" id="subscribe">
+  <div class="container">
+    <div style="background: var(--accent-soft); border-radius: 28px; padding: 48px 40px; text-align: center;">
+      <h2 style="font-size: 1.9rem; font-weight: 700; margin-bottom: 12px;">订阅抖漫工作室追番提醒</h2>
+      <p style="color: var(--ink-secondary); max-width: 560px; margin: 0 auto 24px;">第一时间获取新番上线、更新日历与制作花絮。本专题页持续跟进抖漫工作室全部动态，收藏即可随时查看。</p>
+      <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+        <a href="/#latest-update" style="background: var(--accent); color: #fff; padding: 12px 28px; border-radius: 40px; font-weight: 600;">查看更新日历</a>
+        <a href="/#hot-recommend" style="background: #fff; color: var(--accent); border: 1px solid var(--accent); padding: 12px 28px; border-radius: 40px; font-weight: 600;">浏览作品库</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>抖漫工作室专题站</h4>
+        <p>本页面为抖漫工作室非官方内容聚合专题，整理作品信息、更新动态与社区讨论，供国漫爱好者参考。所有作品版权归抖漫工作室及相关平台所有。</p>
+        <p style="margin-top: 12px;">内容更新至2026年11月7日，后续动态请以官方发布为准。</p>
+      </div>
+      <div>
+        <h4>快速导航</h4>
+        <div class="footer-links">
+          <a href="/#hot-recommend">热门推荐</a>
+          <a href="/#latest-update">最新动态</a>
+          <a href="/#deep-analysis">深度解析</a>
+          <a href="/#faq">常见问题</a>
+          <a href="/#comments">社区评论</a>
+        </div>
+      </div>
+      <div>
+        <h4>友情链接</h4>
+        <div class="footer-links">
+          <a href="#">国漫观察站</a>
+          <a href="#">短番情报局</a>
+          <a href="#">动画制作笔记</a>
+          <a href="#">追番日历</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 抖漫工作室专题站 · 内容仅供参考 · 本站与抖漫工作室官方无隶属关系
+    </div>
+  </div>
+</footer>
+
+</body>
+                                  </html>
